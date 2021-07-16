@@ -1,4 +1,9 @@
 # Single-Candlestick-Patterns
-1. Above Script is used to identify Single Candlelestick Pattern.
+1. Above Script is used to identify Single Candlelestick Pattern of Sensex on a Particular Day.
 2. It is based on Daily Time Frame for Sensex since 1990 (api which I am using).
 3. You can use this by Git Clone and change the app.js file according to your need.
+4. ```sh
+> git clone https://github.com/pvrahul271199/Single-Candlestick-Patterns.git
+> cd Single-Candlestick-Patterns
+> ```
+5.Use your API to fetch the Data and check the pattern in app.js.
