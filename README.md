@@ -8,4 +8,4 @@
 > git clone https://github.com/pvrahul271199/Single-Candlestick-Patterns.git
 > cd Single-Candlestick-Patterns/
  ```
-5. Use your API to fetch the Data and check the pattern in app.js.
+5. Use your API in `app.js` to fetch the Data and check the `patterns` using modules in patterns folder..
