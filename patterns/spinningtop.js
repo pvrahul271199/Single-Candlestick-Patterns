@@ -1,4 +1,4 @@
-const isDoji = function (open,high,low,close){
+const isSpinningTop = function (open,high,low,close){
    
     const upperLeg = close>open ? Math.round(high - close) : Math.round(high - open);
     const lowerLeg = close>open ? Math.round(open - low) : Math.round(close - low);
@@ -7,17 +7,16 @@ const isDoji = function (open,high,low,close){
     const max = Math.max(lowerLeg,upperLeg);
 
     if(close>open){
-        console.log(`${upperLeg}, ${lowerLeg}, ${body}`)
-        if( (min <= max) && (min>= (0.57* max)) && (body <= (0.1 * min))){
-                    console.log("Bullish Doji")
+        if( (min <= max) && (min>= (0.57* max)) && (body <= (0.39 * min))){
+            return "Bullish SpinningTop"
         } else {
             return false
         }
     }
     else{
-        console.log(`${upperLeg}, ${lowerLeg}, ${body}`)
-        if( (min <= max) && (min>= (0.57* max)) && (body <= (0.1 * min))){
-            return "Bearish Doji"
+
+        if( (min <= max) && (min>= (0.57* max)) && (body <= (0.39 * min))){
+            return "Bearish SpinningTop"
         } else {
             return false
         }            
@@ -25,4 +24,4 @@ const isDoji = function (open,high,low,close){
 }
 
 
-module.exports = isDoji;
+module.exports = isSpinningTop;
